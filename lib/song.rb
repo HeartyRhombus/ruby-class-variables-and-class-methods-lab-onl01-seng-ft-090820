@@ -34,7 +34,7 @@ attr_accessor :name, :genre, :artist
       else
         genre_count[genre] = 1
       end
-    genre_count
+    genre_count.uniq
     end
   end
 
