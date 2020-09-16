@@ -36,7 +36,12 @@ attr_accessor :name, :genre, :artist
   end
 
   def self.artist_count
-
+    a_histogram = Hash.new(0)
+    @@artists.each do |artist|
+      a_histogram[artist]
+      a_histogram[artist] = a_histogram[artist] + 1
+    end
+    a_histogram
   end
 
 end
