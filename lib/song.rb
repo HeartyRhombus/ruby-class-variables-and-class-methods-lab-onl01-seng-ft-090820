@@ -27,15 +27,10 @@ attr_accessor :name, :genre, :artist
   end
 
   def self.genre_count
-    genre_count =  Hash.new
-    @@genres.each do |genre|
-      if genre_count[genre]
-        genre_count[genre] += 1
-      else
-        genre_count[genre] = 1
-      end
-    genre_count
-    end
+    histogram =  Hash.new(0)
+    histogram[@@genres]
+    histogram[@@genres] = histogram[@@genres] + 1
+    histogram
   end
 
   def self.artist_count
