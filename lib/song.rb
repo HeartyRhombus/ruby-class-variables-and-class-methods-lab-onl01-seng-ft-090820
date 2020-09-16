@@ -31,6 +31,7 @@ attr_accessor :name, :genre, :artist
     @@genres.each do |genre|
       histogram[genre]
       histogram[genre] = histogram[genre] + 1
+    end
     histogram
   end
 
