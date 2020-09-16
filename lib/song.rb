@@ -32,7 +32,7 @@ attr_accessor :name, :genre, :artist
       g_histogram[genre]
       g_histogram[genre] = g_histogram[genre] + 1
     end
-    histogram
+    g_histogram
   end
 
   def self.artist_count
